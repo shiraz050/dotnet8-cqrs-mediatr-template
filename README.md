@@ -38,7 +38,7 @@ CQRS.Template/
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dotnet8-cqrs-mediatr-template.git
+git clone https://github.com/shiraz050/dotnet8-cqrs-mediatr-template.git
 cd dotnet8-cqrs-mediatr-template
 ```
 
