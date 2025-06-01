@@ -59,8 +59,8 @@ Example request body:
 
 ```json
 {
-  "name": "Adeel Abass",
-  "email": "adeel@example.com"
+  "name": "User User",
+  "email": "User@example.com"
 }
 ```
 
