@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using FluentValidation;
 using System.Reflection;
 using MediatR;
+using CQRS.Template.Application.Features.Users.Commands.CreateUser;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Register MediatR
-builder.Services.AddMediatR(Assembly.Load("CQRS.Template.Application"));
-
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUserCommand).Assembly));
 // Register FluentValidation
 builder.Services.AddValidatorsFromAssembly(Assembly.Load("CQRS.Template.Application"));
 
