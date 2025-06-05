@@ -6,6 +6,7 @@ using FluentValidation;
 using System.Reflection;
 using MediatR;
 using CQRS.Template.Application.Features.Users.Commands.CreateUser;
+using CQRS.Template.API.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,7 @@ var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.MapControllers();
 
